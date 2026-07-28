@@ -21,13 +21,6 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-/*
-    rock beats scissors
-    paper beats rock
-    scissors beats paper
-*/ 
- 
-
 
 
 function playGame() {
