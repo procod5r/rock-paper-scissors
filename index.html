@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissors</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .scores {
+            background-color: beige;
+            display: flex;
+            justify-content: space-between;
+        }
+        .game-container {
+            background-color: aquamarine;
+            margin: 32px;
+            padding: 16px 48px;
+            border-radius: 16px;
+            text-align: center;
+            width: max-content;
+        }
+        .options {
+            padding: 8px 16px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hi, Let's play!</h1>
-    <h2>The game consists of 5 rounds.</h2>
+    <div class="game-container">
+        <h1>Hi, Let's play!</h1>
+        <h2>The game consists of 5 rounds.</h2>
 
-    <h3 class="round"></h3>
-    <div class="results-container">
-        <p class="round-info"></p>
+        <h3 class="round"></h3>
+
+        <div class="scores">
+            <span class="userScoreSpan"></span>
+            <span class="compScoreSpan"></span>
+        </div>
+
+        <div class="results-container">
+            <p class="round-info"></p>
+        </div>
     </div>
 </body>
 

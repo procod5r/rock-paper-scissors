@@ -1,6 +1,8 @@
 const results = document.querySelector('.results-container');
 const gameRound = document.querySelector('.round');
 const roundInfo = document.querySelector('.round-info');
+const userScore = document.querySelector('.userScoreSpan');
+const compScore = document.querySelector('.compScoreSpan');
 const rockBtn = document.createElement('button');
 const paperBtn = document.createElement('button');
 const scissorsBtn = document.createElement('button');
@@ -60,10 +62,11 @@ function getComputerChoice() {
 }
 
 
+let humanScore = 0;
+let computerScore = 0;
 
 function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
+
 
         playRound(getHumanChoice(), getComputerChoice())
         
@@ -102,6 +105,9 @@ function playGame() {
                     break;
                     
             }
+            userScore.textContent = `You: ${humanScore}`;
+            compScore.textContent = `Computer: ${computerScore}`;
+
     }
 }
 
