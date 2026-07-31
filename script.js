@@ -15,15 +15,13 @@ paperBtn.setAttribute("id", "paper")
 paperBtn.classList.add('options');
 scissorsBtn.setAttribute("id", "scissors")
 scissorsBtn.classList.add('options');
-// rockBtn.classList.add('inactive')
-// paperBtn.classList.add('inactive')
-// scissorsBtn.classList.add('inactive')
 results.appendChild(rockBtn)
 results.appendChild(paperBtn)
 results.appendChild(scissorsBtn)
-let round = 0;
 
+let round = 0;
 let option;
+
 document.addEventListener('click', (e) => {
     if(e.target.matches('.options')){    
         switch(e.target.id) {
@@ -59,25 +57,11 @@ function getComputerChoice() {
         computerChoice = 'scissors';
         return computerChoice
     } 
-    
 }
-
-// function getHumanChoice() {
-//     let humanChoice = prompt("Choose: Rock, Paper or Scissors");
-//     return humanChoice;
-// }
-
-/*
-    rock beats scissors
-    paper beats rock
-    scissors beats paper
-*/ 
- 
 
 
 
 function playGame() {
-    
     let humanScore = 0;
     let computerScore = 0;
 
@@ -92,8 +76,6 @@ function playGame() {
 
 
     function playRound(humanChoice, computerChoice) {
-        
-
             round = round + 1;
             gameRound.textContent = `Round ${round}`;
             
@@ -120,8 +102,6 @@ function playGame() {
                     break;
                     
             }
-
-            // add line break
     }
 }
 
@@ -136,10 +116,6 @@ function displayWinner(humanScore, computerScore) {
     results.style.fontFamily = "cursive";
     results.textContent = `Winner is: ${winner}`;
 
-    // console.log('===== RESULTS =====')
-    
-    // console.log(`Your final score is: ${humanScore}`)
-    // console.log(`The computer's final score is: ${computerScore}`)
 }
 
 function computeResults(humanScore, computerScore) {
@@ -152,5 +128,3 @@ function computeResults(humanScore, computerScore) {
         return "COMPUTER"
     }
 }
-
-// playGame()
