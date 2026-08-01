@@ -119,13 +119,14 @@ function displayWinner(humanScore, computerScore) {
     results.style.color = "green";
     results.style.fontWeight = 600;
     results.style.textAlign = "center";
-    results.style.fontSize = "42px";
+    results.style.fontSize = "32px";
     results.style.fontFamily = "cursive";
 
     if (winner == "IT'S A TIE!") {
-        results.textContent = `${winner}`;
+        results.style.color = "grey";
+        results.textContent = `DRAW`;
     }
-    else {
+    else{
         results.textContent = `Winner: \n${winner}`;
     }
 
