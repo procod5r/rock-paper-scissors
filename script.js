@@ -2,6 +2,7 @@ const results = document.querySelector('.results-container');
 const buttonsContainer = document.querySelector('.btn-container');
 const gameRound = document.querySelector('.round');
 const roundInfo = document.querySelector('.round-info');
+const choicesText = document.querySelector('.choice-info');
 const userScore = document.querySelector('.userScoreSpan');
 const compScore = document.querySelector('.compScoreSpan');
 const rockBtn = document.createElement('button');
@@ -89,6 +90,7 @@ function playGame() {
                 case (computerChoice === "rock" && humanChoice === "scissors"):
                 case (computerChoice === "paper" && humanChoice === "rock"):
                 case (computerChoice === "scissors" && humanChoice === "paper"):
+                    choicesText.textContent = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
                     roundInfo.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
                     computerScore++;
                     break;
@@ -96,18 +98,20 @@ function playGame() {
                 case (humanChoice === "rock" && computerChoice === "scissors"):
                 case (humanChoice === "paper" && computerChoice === "rock"):
                 case (humanChoice === "scissors" && computerChoice === "paper"):
+                    choicesText.textContent = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
                     roundInfo.textContent =  `You win! ${humanChoice} beats ${computerChoice}`;
                     humanScore++;
                     break;
 
                 case (humanChoice === computerChoice):
+                    choicesText.innerHTML = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
                     roundInfo.textContent = "It's a tie!";
                     break;
                     
             }
             userScore.parentNode.style.padding = "10px";
             userScore.textContent = `You: ${humanScore}`;
-            compScore.textContent = `Computer: ${computerScore}`;
+            compScore.textContent = `Comp: ${computerScore}`;
 
     }
 }
