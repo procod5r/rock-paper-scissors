@@ -89,24 +89,24 @@ function playGame() {
                 case (computerChoice === "rock" && humanChoice === "scissors"):
                 case (computerChoice === "paper" && humanChoice === "rock"):
                 case (computerChoice === "scissors" && humanChoice === "paper"):
-                    choicesText.textContent = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
-                    roundInfo.textContent = `Comp wins! ${computerChoice} beats ${humanChoice}`;
+                    choicesText.textContent = `You chose: ${humanChoice}. Computer chose: ${computerChoice}`;
+                    roundInfo.textContent = `Computer wins! ${computerChoice} beats ${humanChoice}`;
                     computerScore++;
                     break;
 
                 case (humanChoice === "rock" && computerChoice === "scissors"):
                 case (humanChoice === "paper" && computerChoice === "rock"):
                 case (humanChoice === "scissors" && computerChoice === "paper"):
-                    choicesText.textContent = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
+                    choicesText.textContent = `You chose: ${humanChoice}. Computer chose: ${computerChoice}`;
                     roundInfo.textContent =  `You win! ${humanChoice} beats ${computerChoice}`;
                     humanScore++;
                     break;
 
                 case (humanChoice === computerChoice):
-                    choicesText.innerHTML = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
+                    choicesText.innerHTML = `You chose: ${humanChoice}. Computer chose: ${computerChoice}`;
                     roundInfo.textContent = "It's a tie!";
                     break;
-                    
+                  
             }
             userScore.parentNode.style.padding = "10px";
             userScore.textContent = `You: ${humanScore}`;
