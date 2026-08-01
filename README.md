@@ -1,7 +1,7 @@
-# ✊ Rock, Paper, Scissors
+# Rock, Paper, Scissors
 A simple, interactive web-based game of the rock, paper, scissors where you play against the computer.
 
-## 🎮 How to Play
+## How to Play
 1. Open the project in your web browser.
 2. Choose **Rock**, **Paper**, or **Scissors** by clicking on the respective button.
 3. The computer will randomly choose its move.
@@ -10,12 +10,12 @@ A simple, interactive web-based game of the rock, paper, scissors where you play
    * Scissors beats Paper 
    * Paper beats Rock
 
-## 🛠️ Technologies Used
+## Technologies Used
 * HTML5
 * CSS3
 * JavaScript
 
-## 🚀 How to Run
+## How to Run
 To run this project locally on your machine:
 1. **Clone the repository:**
    ```bash
