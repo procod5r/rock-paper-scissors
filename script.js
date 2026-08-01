@@ -120,7 +120,6 @@ function displayWinner(humanScore, computerScore) {
     results.style.fontWeight = 600;
     results.style.textAlign = "center";
     results.style.fontSize = "32px";
-    results.style.fontFamily = "cursive";
 
     if (winner == "IT'S A TIE!") {
         results.style.color = "grey";
