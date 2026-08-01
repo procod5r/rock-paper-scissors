@@ -69,8 +69,7 @@ let computerScore = 0;
 
 function playGame() {
 
-
-        playRound(getHumanChoice(), getComputerChoice())
+    playRound(getHumanChoice(), getComputerChoice())
         
     if(round === 5) {
         displayWinner(humanScore, computerScore);
@@ -91,7 +90,7 @@ function playGame() {
                 case (computerChoice === "paper" && humanChoice === "rock"):
                 case (computerChoice === "scissors" && humanChoice === "paper"):
                     choicesText.textContent = `You chose: ${humanChoice}. Comp chose: ${computerChoice}`;
-                    roundInfo.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
+                    roundInfo.textContent = `Comp wins! ${computerChoice} beats ${humanChoice}`;
                     computerScore++;
                     break;
 
