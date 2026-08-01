@@ -1,4 +1,5 @@
 const results = document.querySelector('.results-container');
+const buttonsContainer = document.querySelector('.btn-container');
 const gameRound = document.querySelector('.round');
 const roundInfo = document.querySelector('.round-info');
 const userScore = document.querySelector('.userScoreSpan');
@@ -17,9 +18,9 @@ paperBtn.setAttribute("id", "paper")
 paperBtn.classList.add('options');
 scissorsBtn.setAttribute("id", "scissors")
 scissorsBtn.classList.add('options');
-results.appendChild(rockBtn)
-results.appendChild(paperBtn)
-results.appendChild(scissorsBtn)
+buttonsContainer.appendChild(rockBtn)
+buttonsContainer.appendChild(paperBtn)
+buttonsContainer.appendChild(scissorsBtn)
 
 let round = 0;
 let option;
@@ -83,7 +84,6 @@ function playGame() {
             gameRound.textContent = `Round ${round}`;
             
             humanChoice = humanChoice.toLowerCase();
-            roundInfo.textContent = `You chose: ${humanChoice}, Computer chose: ${computerChoice}`;
 
             switch(true) {
                 case (computerChoice === "rock" && humanChoice === "scissors"):
@@ -105,6 +105,7 @@ function playGame() {
                     break;
                     
             }
+            userScore.parentNode.style.padding = "10px";
             userScore.textContent = `You: ${humanScore}`;
             compScore.textContent = `Computer: ${computerScore}`;
 
@@ -120,7 +121,13 @@ function displayWinner(humanScore, computerScore) {
     results.style.textAlign = "center";
     results.style.fontSize = "42px";
     results.style.fontFamily = "cursive";
-    results.textContent = `Winner is: ${winner}`;
+
+    if (winner == "IT'S A TIE!") {
+        results.textContent = `${winner}`;
+    }
+    else {
+        results.textContent = `Winner: \n${winner}`;
+    }
 
 }
 
